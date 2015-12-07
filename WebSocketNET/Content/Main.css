@@ -1,0 +1,141 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 100%;
+    background-color:burlywood;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.full {
+    width: 100%;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    position: relative;
+}
+
+.margin_big_top {
+    margin-top: 1.2em;
+}
+
+.margin_big_bottom {
+    margin-bottom: 1.2em;
+}
+
+.margin_top {
+    margin-top: 10px;
+}
+
+.padding_top {
+    padding-top: 10px;
+}
+
+.padding_bottom {
+    padding-bottom: 10px;
+}
+
+.center {
+    text-align: center;
+}
+
+.todo img {
+    max-width: 90%;
+}
+
+#img_todo {
+    padding: 5px;
+    border: 1px solid #898989;
+    margin-top: 10px;
+}
+
+    #img_todo.dragging {
+        border: 1px dashed #898989;
+    }
+
+.note {
+    position: relative;
+    background-color: #F4F39E;
+    border-color: #DEE184;
+    text-align: center;
+    margin: 2.5em 0px;
+    padding: 1.5em 1em;
+    -webkit-box-shadow: #DDD 8px 1px 2px;
+    -webkit-box-shadow: 0px 1px 3px rgba(0,0,0,0.25);
+    -moz-box-shadow: 0px 1px 3px rgba(0,0,0,0.25);
+    box-shadow: 0px 1px 3px rgba(0,0,0,0.25);
+}
+
+.new_todo {
+    border: none;
+    padding: 0;
+    background: rgba(0,0,0,0);
+    box-shadow: none;
+    font-size: 110%;
+    outline-width: 0;
+}
+
+.todoList input .todoList li {
+    width: 100%;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+
+.site_ceter {
+    margin-left: auto;
+    margin-right: auto;
+    width: 500px;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+
+.note li {
+    text-align: left;
+    margin-top: 10px;
+    border-bottom: 1px solid #a9a9a9;
+}
+
+    .note li span.uncheked, .note li span.checked, .note li span.delete {
+        background-repeat: no-repeat;
+        cursor: pointer;
+        float: left;
+        width: 16px;
+        height: 16px;
+    }
+
+
+    .note li span.uncheked {
+        background-image: url("/Content/Tick.png");
+    }
+
+
+    .note li span.checked {
+        background-image: url("/Content/TickChecked.png");
+    }
+
+    .note li span.delete {
+        background-image: url("/Content/Close.png");
+        background-position: right;
+        float: right;
+    }
+
+    .note li span.todo {
+        padding-left: 0.5em;
+    }
+
+.tag {
+    font-size: 80%;
+    font-style: italic;
+    color: #898989;
+}
+
+@media all and (max-width: 550px) {
+    .site_ceter {
+        width: 90%;
+    }
+}

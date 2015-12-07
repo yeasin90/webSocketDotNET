@@ -1,0 +1,44 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+
+    <link href="~/Content/Main.css" rel="stylesheet" />
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+    <script src="~/Scripts/WDApp.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+            if ('WebSocket' in window || 'MozWebSocket' in window) {
+                var wdApp;
+                wdApp = new WDApp();
+                wdApp.init();
+            } else {
+                $("section").remove();
+                $("header").html("Your browser doesn't support WebSockets. ");
+            }
+        });
+    </script>
+</head>
+<body>
+    <header class="site_center text-center padding margin_big_top margin_big_bottom">
+        <h1 class="glyphicon-fullscreen site_center margin_big_top">Real-Time ToDo List<span class="listID"></span></h1>
+    </header>
+
+    <section class="site_center note">
+        <header>
+            <input placeholder="New ToDo Item" autofocus="" class="glyphicon-fullscreen new_todo" />
+        </header>
+        <ul></ul>
+    </section>
+    <footer class="tag site_center center">
+        <span class="connStatus margin_top margin_bottom"></span>
+    </footer>
+</body>
+</html>
