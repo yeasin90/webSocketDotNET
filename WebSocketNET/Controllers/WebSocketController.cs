@@ -29,11 +29,6 @@ namespace WebSocketNET.Controllers
 
         internal class NoteSocketHandler : WebSocketHandler
         {
-            public NoteSocketHandler()
-            {
-
-            }
-
             public override void OnClose()
             {
                 connections.Remove(this);
